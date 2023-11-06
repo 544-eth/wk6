@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If statements</title>
+</head>
+<body>
+    <p>Your score is: <span class="score"></span></p>
+    <p>Your grade is: <span class="grade"></span></p>
+</body>
+
+<script>
+    // const score = document.querySelector('.score')
+    const p = document.querySelectorAll('p')[1]
+    const score = document.getElementsByClassName('score')[0]
+    const grade = document.getElementsByClassName('grade')[0]
+
+    const result = prompt('what did you score')
+    score.innerHTML = result
+
+    if(Number(result) <= 100 && !isNaN(result)){
+
+        if(result >= 80){
+            grade.innerHTML = 'A'
+            p.style.background = 'green'
+        }
+
+
+        else if(result >= 60){
+            grade.innerHTML = 'B'
+            
+            p.style.background = 'yellow'
+        }
+
+        else if(result >= 50){
+            grade.innerHTML = 'C'
+            p.style.background = 'orange'
+        }
+        
+    
+    }
+else{
+        grade.textContent = 'not part of the number'
+        p.style.background = 'red'
+    }
+</script>
+
+</html>
