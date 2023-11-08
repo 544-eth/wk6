@@ -1,0 +1,21 @@
+body {
+    background-color: #eee;
+}
+
+.parent {
+    display: grid;
+    height: 95vh;
+    border: 5px dashed rebeccapurple;
+}
+
+.child {
+    margin: auto;
+    place-items: center;
+}
+
+#color-box {
+    border: 10px solid gold;
+    width: 300px;
+    height: 300px;
+}
+
